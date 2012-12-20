@@ -1,0 +1,359 @@
+<html>
+<head>
+<title>FullFart</title>
+<!-- 1140px Grid styles for IE -->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<!-- The 1140px Grid - http://cssgrid.net/ -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"
+	media="screen" />
+
+
+
+<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+
+
+
+<style>
+.column.over {
+	border: 2px dashed #000;
+}
+
+#menu {
+	border: 1px solid #000;
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	overflow: auto;
+}
+
+#wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	overflow: auto;
+	border: 1px solid #000;
+}
+
+div#items {
+	overflow: scroll;
+	float: left;
+	height: 500px;
+	width: 115px;
+	outline: 0;
+	border: 1px solid #000;
+}
+
+div#view {
+	height: 500px;
+	width: 320px;
+	outline: 0;
+	border: 1px solid #000;
+	float: right;
+}
+
+#col1 {
+	display: inline-block;
+	width: 20%;
+	position: relative;
+	float: left;
+}
+
+#col2 {
+	/* display: inline-block; */
+	width: 320px;
+	position: relative;
+	float: left;
+}
+.sign_settings{
+	display: none;
+	padding: 15px;
+}
+</style>
+</head>
+<body>
+
+	<!-- 	<div id="menu">
+		<div class="form-actions">
+			<center>
+				<small>Konstruktor</small>
+			</center>
+
+			<form name="input" align="right">
+				<button style="float: left;" id="toMenu" class="btn btn-large btn-primary">Avslutte</button>
+
+				<input type="text" name="" class="input-medium search-query" placeholder="Skriv tittel"/> <input type="submit" class="btn"
+					value="Lagre" onmousedown="save();" />
+			</form>
+
+		</div>
+	</div>
+ -->
+	<div id="menu">
+
+		<ul class="breadcrumb">
+			<li><a href="index.html"><img
+					src="menus/glyphicons_020_home.png" /></a> <span class="divider">/</span>
+			<li class="active">Konstruktor</li>
+
+			<li style="float: right">
+				<form name="input" align="right">
+
+					<input type="text" name="" class="input-medium search-query"
+						placeholder="Skriv tittel" /> <input type="submit" class="btn"
+						value="Lagre" onmousedown="save();" />
+				</form>
+			</li>
+		</ul>
+	</div>
+
+	<div id="wrapper">
+		<div id="col1">
+			<div id="items">
+				<table width="100%" height="100%" border="1">
+					<header>Fareskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/100_1_Skarp sving til hoyre.png">
+				</div>
+				<div class="column" draggable="true" align="center" align="center">
+					<img alt="stop" src="fareskilt/102_2.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/104_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/104_2.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/106_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/106_2.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/106_3.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/108_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/109_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/110_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/112_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/114_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/116_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/117_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/118_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/120_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/122_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/124_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/126_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/132_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/134_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/135_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/136_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/136_2.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/136_3.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/138_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/138_2.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/139_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/140_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/142_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/144_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/146_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/146_2.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/146_3.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/146_4.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/146_5.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/148_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/149_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/150_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/152_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/154_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/155_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="fareskilt/156_0.png">
+				</div>
+				<table width="100%" height="100%" border="1">
+					<header>Vilkepliktsskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">...</div>
+				<table width="100%" height="100%" border="1">
+					<header>Forbudsskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/stop.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/306_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/306_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/306_3.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/306_4.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/306_6.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/306_7.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/330_1.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/330_2.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/332_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/334_0.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/362_100.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/362_50.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/362_60.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/362_70.png">
+				</div>
+				<div class="column" draggable="true" align="center">
+					<img alt="stop" src="forbudsskilt/362_80.png">
+				</div>
+
+				<table width="100%" height="100%" border="1">
+					<header>Pabudsskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">...</div>
+				<table width="100%" height="100%" border="1">
+					<header>Opplysningsskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">...</div>
+				<table width="100%" height="100%" border="1">
+					<header>Serviceskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">...</div>
+				<table width="100%" height="100%" border="1">
+					<header>Vegvisningsskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">...</div>
+				<table width="100%" height="100%" border="1">
+					<header>Underskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">...</div>
+				<table width="100%" height="100%" border="1">
+					<header>Markeringsskilt</header>
+				</table>
+				<div class="column" draggable="true" align="center">
+					<img alt="pit" src="markeringsskilt/942.png">
+				</div>
+				<table width="100%" height="100%" border="1">
+					<header>Annet</header>
+				</table>
+				<div class="column" draggable="true" align="center">
+					<img alt="pit" src="annet/road_pit.png">
+				</div>
+			</div>
+		</div>
+		<div id="col2">
+			<canvas id="c" width="320" height="500"></canvas>
+		</div>
+		
+		<div id="col2"  class="sign_settings">
+			<pre>Selected: <span class="label">-</span>
+			<br>Size: <input type="range" min="30" max="50" value="0" step="2" onchange="showValue(this.value)" />
+			</pre>		
+						<button class="btn-primary" type="submit">
+Continue
+</button>
+			<button class="btn btn-danger" type="submit">
+Cancel
+</button>
+		</div>
+
+	</div>
+
+	<script src="create.js"></script>
+
+</body>
+</html>

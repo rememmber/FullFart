@@ -1,0 +1,266 @@
+<html>
+<head>
+<title>FullFart Kjoresimulator</title>
+<!-- 1140px Grid styles for IE -->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<!-- The 1140px Grid - http://cssgrid.net/ -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"
+	media="screen" />
+	
+	<link rel="stylesheet" href="css/jquery-ui-1.8.18.custom.css" type="text/css"
+	media="screen" />
+
+
+
+<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+<style>
+#dialog-overlay {
+
+	/* set it to fill the whil screen */
+	width:100%; 
+	height:100%;
+	
+	/* transparency for different browsers */
+	filter:alpha(opacity=50); 
+	-moz-opacity:0.5; 
+	-khtml-opacity: 0.5; 
+	opacity: 0.5; 
+	background:#000; 
+
+	/* make sure it appear behind the dialog box but above everything else */
+	position:absolute; 
+	top:0; left:0; 
+	z-index:3000; 
+
+	/* hide it by default */
+	display:none;
+}
+
+
+#dialog-box {
+	
+	/* css3 drop shadow */
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	
+	/* css3 border radius */
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	
+	background:#eee;
+	/* styling of the dialog box, i have a fixed dimension for this demo */ 
+	width:328px; 
+	
+	/* make sure it has the highest z-index */
+	position:absolute; 
+	z-index:5000; 
+
+	/* hide it by default */
+	display:none;
+}
+
+#dialog-box .dialog-content {
+	/* style the content */
+	text-align:left; 
+	padding:10px; 
+	margin:13px;
+	color:#666; 
+	font-family:arial;
+	font-size:11px; 
+}
+
+a.button {
+	/* styles for button */
+	margin:10px auto 0 auto;
+	text-align:center;
+	background-color: #e33100;
+	display: block;
+	width:50px;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1;
+	
+	/* css3 implementation :) */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+	
+}
+
+a.button:hover {
+	background-color: #c33100;	
+}
+
+/* extra styling */
+#dialog-box .dialog-content p {
+	font-weight:700; margin:0;
+}
+
+#dialog-box .dialog-content ul {
+	margin:10px 0 10px 20px; 
+	padding:0; 
+	height:50px;
+}
+* {
+	margin: 0;
+	padding: 0
+}
+
+#menu {
+	border: 1px solid #000;
+	display: block;
+	margin: 0 auto;
+	width: 620;
+	overflow: auto;
+}
+
+#test{
+border: 1px solid #000;
+}
+
+#wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 620;
+	overflow: auto;
+	border: 1px solid #000;
+}
+
+#col1 {
+	display: inline-block;
+	width: 20%;
+	position: relative;
+	float: left;
+}
+
+#col2 {
+	display: inline-block;
+	width: 320px;
+	position: relative;
+	float: left;
+}
+
+#col3 {
+	display: inline-block;
+	width: 20%;
+	position: relative;
+	float: left;
+}
+
+.canvas {
+	margin: 10px;
+	color: white;
+}
+
+#speedometerArrow {
+	top: 200px;
+}
+
+.innercanvas {
+	
+}
+
+#petrolArrow {
+	position: relative;
+	display: inline-block;
+	bottom: 90px;
+}
+
+#petrolBulb {
+	position: relative;
+	display: inline-block;
+	bottom: 140px;
+	left: 51px;
+}
+</style>
+</head>
+<body>
+
+<!-- 	<div id="menu">
+		<div class="form-actions">
+			<center>
+				<small>Kjoresimulator</small>
+			</center>
+			<button id="toMenu" class="btn btn-large btn-primary">Avslutte</button>
+
+
+		</div>
+	</div> -->
+
+	<div id="menu">
+   	<ul class="breadcrumb">
+		<li><a href="index.html"><img src="menus/glyphicons_020_home.png" /></a></li>
+		<span class="divider">/</span> 
+		<li class="active">Kjoresimulator</li>
+	</ul>
+	</div>
+
+	<div id="wrapper">
+		<div id="col1">
+			<div class="canvas">
+				<canvas id='speedometer' style="z-index: 1;"></canvas>
+				<div class="innercanvas">
+					<canvas id='speedometerArrow' style="z-index: 0;"></canvas>
+				</div>
+			</div>
+			<div class="canvas">
+				<canvas id='petrol' style="z-index: 1;"></canvas>
+				<div class="innercanvas">
+					<canvas id='petrolArrow' style="z-index: 0;"></canvas>
+				</div>
+				<div class="innercanvas">
+					<canvas id='petrolBulb' style="z-index: 0;"></canvas>
+				</div>
+			</div>
+		</div>
+		<div id="col2">
+			<canvas id='c'></canvas>
+		</div>
+		<div id="col3">
+			<div class="canvas">
+				<canvas id='navigator' style="z-index: 1;"></canvas>
+				<div class="innercanvas">Canvas-Right-1-1</div>
+			</div>
+			<div class="canvas">
+				<div class="innercanvas">
+					<canvas id='logg' style="z-index: 1;"></canvas>
+				</div>
+			</div>
+		</div>
+		<!--  <canvas id="canvas0"></canvas> -->
+	</div>
+	
+<div id="dialog-overlay"></div>
+<div id="dialog-box">
+	<div class="dialog-content">
+		<div id="dialog-message"></div>
+		<table>
+		<tr>
+		<td>
+		<a href="#" class="btn btn-small btn-primary">Gjenta</a>
+		</td>
+		<td>
+		<a href="#" class="btn btn-small btn-primary">Avsla</a>	
+		</td>
+		</tr>
+		</table>
+	</div>
+</div>
+
+	<script src="simulator.js"></script>
+</body>
+</html>

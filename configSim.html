@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FullFart Menu</title>
+
+<!-- 1140px Grid styles for IE -->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<!-- The 1140px Grid - http://cssgrid.net/ -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"
+	media="screen" />
+
+
+
+<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+
+<script src="js/configuration.js"></script>
+
+
+        <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+       <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js"></script>
+
+        <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-carousel.js"></script>
+
+
+<style>
+body {
+	width: 100%;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-fluid {
+	height: 500px;
+}
+
+#menu_item {
+	padding: 15px;
+}
+
+.pager {
+	position: relative;
+	top: 50px;
+}
+
+#assignments {
+	height: 55%;
+	overflow: scroll;
+}
+
+.hero-unit {
+	overflow: scroll;
+}
+
+.carousel-controlleft{
+	display: none;
+}
+
+.navleft{
+	display: none;
+}
+.navrigth{
+	display: block;
+}
+</style>
+
+</head>
+<body onload="populateFromStorage();">
+	<div style="border: 1px solid #000;">
+		<ul class="breadcrumb">
+			<li><a href="index.html"><img
+					src="menus/glyphicons_020_home.png" /></a></li>
+			<span class="divider">/</span>
+			<li class="active">Kjoresimulator Konfigurasjon</li>
+		</ul>
+	</div>
+
+	<div class="container-fluid" style="border: 1px solid #000">
+	
+	<div id="myCarousel" class="carousel slide" style="height: 20%; width: 100%;">
+            <div class="carousel-inner">
+                <div class="item active">
+
+        
+
+		<div class="row" align=center>
+
+			<!-- 		<div class="span1">
+				<ul class="pager">
+					<li class="previous"><a href="#">&larr;</a></li>
+				</ul>
+			</div> -->
+			<div class="span4">
+				<img src="Car.png" />
+			</div>
+
+
+
+
+			<div class="span4" style="font-size: 85%; line-height: 90%; width: 50%;">
+			
+			
+
+				<div class="hero-unit" style="height: 10px; width: 70%;">
+					<div class="row">
+						<div class="span4" align="center">
+							<b>Mercedes-Benz SL 300</b>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span4">
+							<hr />
+						</div>
+					</div>
+					<div class="row">
+						<div class="span2">Hp (kW) at rpm:</div>
+						<div class="span2">231 (170) / 6,000</div>
+					</div>
+					<div class="row">
+						<div class="span2">Acceleration 0-62 mph:</div>
+						<div class="span2">7.8 sec</div>
+					</div>
+					<div class="row">
+						<div class="span2">Fuel consumption:</div>
+						<div class="span2">30.4 mpg</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="span1">
+				<ul class="pager">
+
+					<li class="next"><a href="#">&rarr;</a></li>
+				</ul>
+
+			</div> -->
+		</div>
+		
+                </div>
+                <div class="item">
+...2
+                </div>
+                <div class="item">
+                    ...3
+                </div>
+            </div>
+            <!-- Carousel nav -->
+            <div class="navleft">
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev" onclick="back();">&lsaquo;</a>
+            </div>
+            <div class="navrigth">
+            <a class="carousel-control right" href="#myCarousel" data-slide="next" onclick="next();">&rsaquo;</a>
+            </div>
+        </div>​
+
+
+
+
+		<div id="assignments">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th width="1%">#</th>
+						<th width="1%">Navn</th>
+						<th width="1%">Beskrivelse</th>
+						<th width="1%">Legge</th>
+						<th width="40%">Tidspunkt <span style="float: right">Totalt:
+								<span id="total_time" class="label">0,0</span> min
+						</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 				<tr>
+					<td>…</td>
+					<td>…</td>
+				</tr> -->
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 		<form class="form-horizontal">
+			<fieldset>
+				<legend>Legend text</legend>
+				<div class="control-group">
+					<label class="control-label" for="input01">Text input</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="input01">
+						<p class="help-block">Supporting help text</p>
+					</div>
+				</div>
+			</fieldset>
+		</form> -->
+
+		<form class="well" action="simulator.html">
+			<button type="submit" class="btn btn-primary">Begynn</button>
+		</form>
+
+	</div>
+
+<script>
+function back(){
+	stopCarousel();
+	
+	if($('.carousel').carousel().find('.active').index() == 1){
+		document.getElementsByClassName("navleft")[0].style.display = "none";
+		document.getElementsByClassName("navrigth")[0].style.display = "block";
+		
+	}else{
+		document.getElementsByClassName("navleft")[0].style.display = "block";
+		document.getElementsByClassName("navrigth")[0].style.display = "block";
+	}
+	
+}
+function next(){
+	stopCarousel();
+
+	if($('.carousel').carousel().find('.active').index() == $('.carousel').carousel().children().length - 2){
+		document.getElementsByClassName("navleft")[0].style.display = "block";
+		document.getElementsByClassName("navrigth")[0].style.display = "none";
+		
+	}else{
+		document.getElementsByClassName("navleft")[0].style.display = "block";
+		document.getElementsByClassName("navrigth")[0].style.display = "block";
+	}
+	
+
+}
+
+function stopCarousel(){
+	$('.carousel').carousel( { pause: true, interval: false }); 
+}
+</script>
+
+</body>
+</html>

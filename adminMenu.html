@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FullFart Menu</title>
+
+<!-- 1140px Grid styles for IE -->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<!-- The 1140px Grid - http://cssgrid.net/ -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"
+	media="screen" />
+
+
+
+<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+
+<style>
+body {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-fluid {
+	height: 500px;
+}
+#menu_item{
+padding: 15px;
+}
+</style>
+
+</head>
+<body>
+	<div style="border: 1px solid #000;">
+		<ul class="breadcrumb">
+			<li><a href="index.html"><img
+					src="menus/glyphicons_020_home.png" /></a> <span class="divider">/</span>
+			<li class="active">FullFart Menu</li>
+			<span class="divider">/</span>
+			<li class="active">Admin</li>
+		</ul>
+	</div>
+	<div class="container-fluid" style="border: 1px solid #000">
+		<div id="menu_group">
+			<div class="span3">
+				<div id="menu_item">
+					<a href="create.html"><img src="menus/constructor.png"
+						alt="Bygge egne problemstillinger" width="150" height="150"
+						style="border: 2px solid orange" /></a><br> Konstruktor
+				</div>
+				<div id="menu_item">
+					<a href="statisticsMenu.html"> <img src="menus/statistics.png"
+						alt="Redigere Teori" width="150" height="150"
+						style="border: 2px solid red" /></a><br> Statistikk
+				</div>
+			</div>
+		</div>
+		<div id="menu_group">
+			<div class="span3">
+				<div id="menu_item">
+					<img src="menus/edit.png" alt="Statistikk" width="150" height="150"
+						style="border: 2px solid green" /> <br> Redigere Teori
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

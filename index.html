@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FullFart Menu</title>
+
+<!-- 1140px Grid styles for IE -->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<!-- The 1140px Grid - http://cssgrid.net/ -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"
+	media="screen" />
+
+
+
+<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+
+<style>
+body {
+	width: 100%;
+	height: 500px; margin-left : auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container-fluid {
+	height: 500px;
+}
+
+#menu_item {
+	padding: 15px;
+}
+</style>
+
+</head>
+<body>
+	<div style="border: 1px solid #000;">
+		<ul class="breadcrumb">
+			<li><img src="menus/glyphicons_020_home.png" /></li>
+			<span class="divider">/</span>
+			<li class="active">FullFart Menu</li>
+		</ul>
+	</div>
+	<div class="container-fluid" style="border: 1px solid #000">
+		<div id="menu_group">
+			<div class="span3">
+				<div id="menu_item">
+					<a href="theoryMenu.html"> <img src="menus/theory.png"
+						alt="Teori" width="150" height="150"
+						style="border: 2px solid yellow" /></a><br> Teori
+				</div>
+				<div id="menu_item">
+					<a href="adminMenu.html"> <img src="menus/Admin.png"
+						alt="Admin" width="150" height="150"
+						style="border: 2px solid pink" /></a> <br> Admin
+				</div>
+			</div>
+		</div>
+		<div id="menu_group">
+			<div class="span3">
+				<div id="menu_item">
+					<a href="configSim.html"><img src="menus/simulator.png"
+						alt="Kjoresimulator" width="150" height="150"
+						style="border: 2px solid red"/></a><br>Kjoresimulator
+				</div>
+				<div id="menu_item">
+					<a href="aboutMenu.html"><img src="menus/About.png" alt="About"
+						width="150" height="150" style="border: 2px solid green" /></a><br>
+					About
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
